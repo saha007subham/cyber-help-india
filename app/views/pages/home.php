@@ -17,28 +17,68 @@ declare(strict_types=1);
     <div class="container hero-container">
         <div class="hero-layout">
             <div class="hero-copy">
-                <!-- <div class="hero-badge-wrap">
-                    <span class="badge badge-accent">
-                        <span class="badge-dot"></span> Citizen Cybersecurity Initiative
+                <div class="hero-visual-bg" aria-hidden="true">
+                    <span class="hero-glow hero-glow-primary"></span>
+                    <span class="hero-glow hero-glow-secondary"></span>
+                    <span class="hero-orb"></span>
+                    <span class="hero-particles">
+                        <span class="particle particle-1"></span>
+                        <span class="particle particle-2"></span>
+                        <span class="particle particle-3"></span>
+                        <span class="particle particle-4"></span>
+                        <span class="particle particle-5"></span>
+                        <span class="particle particle-6"></span>
+                        <span class="particle particle-7"></span>
+                        <span class="particle particle-8"></span>
                     </span>
-                </div> -->
+                    <svg class="hero-network" viewBox="0 0 640 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                        <path d="M36 116 C 134 70, 210 72, 286 122 S 438 182, 560 124"/>
+                        <path d="M86 252 C 176 210, 246 206, 332 236 S 496 300, 584 272"/>
+                        <path d="M160 44 C 214 118, 196 194, 246 260 S 390 330, 498 292"/>
+                        <path d="M420 54 C 372 132, 390 206, 346 268 S 250 336, 206 306"/>
+                        <circle cx="72" cy="116" r="2.5"/>
+                        <circle cx="210" cy="78" r="2.5"/>
+                        <circle cx="286" cy="122" r="2.5"/>
+                        <circle cx="560" cy="124" r="2.5"/>
+                        <circle cx="160" cy="252" r="2.5"/>
+                        <circle cx="344" cy="236" r="2.5"/>
+                        <circle cx="584" cy="272" r="2.5"/>
+                        <circle cx="420" cy="54" r="2.5"/>
+                        <circle cx="346" cy="268" r="2.5"/>
+                    </svg>
+                </div>
 
-                <h1 class="hero-title">
-                    Think Digital. <br class="hidden-mobile">
-                    <span class="text-gradient">Grow Smarter.</span>
-                </h1>
+                <div class="hero-content">
+                    <!-- <div class="hero-badge-wrap">
+                        <span class="badge badge-accent">
+                            <span class="badge-dot"></span> Citizen Cybersecurity Initiative
+                        </span>
+                    </div> -->
 
-                <p class="hero-subtitle">
-                    From Stunning Websites to Smart Software, strategy to results - we take care of your business with Ai Based Digital Marketing.
-                </p>
+                    <h1 class="hero-title">
+                        Think Digital. <br class="hidden-mobile">
+                        <span class="text-gradient">Grow Smarter.</span>
+                    </h1>
 
-                <div class="hero-actions">
-                    <a href="tel:1930" class="btn-header-enquiry hero-quote-btn" id="hero-emergency-btn">
-                        Get A Free Quote <span class="btn-icon">&rarr;</span>
-                    </a>
-                    <a href="<?= base_url('about') ?>" class="btn btn-outline btn-lg" id="hero-explore-btn">
-                        Learn More
-                    </a>
+                    <p class="hero-subtitle">
+                        From Stunning Websites to Smart Software, strategy to results - we take care of your business with Ai Based Digital Marketing.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="tel:1930" class="btn-header-enquiry hero-quote-btn" id="hero-emergency-btn">
+                            Get A Free Quote <span class="btn-icon">&rarr;</span>
+                        </a>
+                        <a href="<?= base_url('about') ?>" class="btn btn-outline btn-lg" id="hero-explore-btn">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="hero-trust-badges" aria-label="Trust badges">
+                        <img class="hero-trust-badge" src="<?= asset('images/logo/facebook-partner.svg') ?>" alt="Facebook" />
+                        <img class="hero-trust-badge" src="<?= asset('images/logo/google-addwords-partner.svg') ?>" alt="Google Ads" />
+                        <img class="hero-trust-badge" src="<?= asset('images/logo/google-partner.svg') ?>" alt="Google Partners" />
+                        <img class="hero-trust-badge" src="<?= asset('images/logo/msme.jpg') ?>" alt="MSME" />
+                    </div>
                 </div>
             </div>
 
@@ -80,16 +120,7 @@ declare(strict_types=1);
         </div>
 
         <!-- Metric Badges -->
-        <?php if (!empty($stats)): ?>
-            <div class="hero-stats-grid">
-                <?php foreach ($stats as $stat): ?>
-                    <div class="stat-card">
-                        <span class="stat-value"><?= e($stat['value']) ?></span>
-                        <span class="stat-label"><?= e($stat['label']) ?></span>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
+        
     </div>
 </section>
 
