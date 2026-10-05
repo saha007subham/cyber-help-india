@@ -28,6 +28,46 @@ Router::get('/about', function () {
     ]);
 });
 
+// Services Page (Foundation Placeholder)
+Router::get('/services', function () {
+    view('pages/placeholder', [
+        'pageTitle' => 'Our Services — Cyber Help India',
+        'title'     => 'Cyber Security Services',
+        'subtitle'  => 'Comprehensive digital safety, fraud investigation support, and cyber consultation services are coming soon.',
+        'badge'     => 'Coming Soon'
+    ]);
+});
+
+// Softwares Page (Foundation Placeholder)
+Router::get('/softwares', function () {
+    view('pages/placeholder', [
+        'pageTitle' => 'Security Softwares — Cyber Help India',
+        'title'     => 'Security Tools & Software',
+        'subtitle'  => 'Curated, vetted anti-phishing, malware protection, and digital hygiene tools for Indian users.',
+        'badge'     => 'Coming Soon'
+    ]);
+});
+
+// Packages Page (Foundation Placeholder)
+Router::get('/packages', function () {
+    view('pages/placeholder', [
+        'pageTitle' => 'Safety Packages — Cyber Help India',
+        'title'     => 'Digital Safety Packages',
+        'subtitle'  => 'Tailored cybersecurity protection plans for individuals, schools, and small businesses.',
+        'badge'     => 'Coming Soon'
+    ]);
+});
+
+// Career Page (Foundation Placeholder)
+Router::get('/career', function () {
+    view('pages/placeholder', [
+        'pageTitle' => 'Careers — Cyber Help India',
+        'title'     => 'Join Our Mission',
+        'subtitle'  => 'Career opportunities and internship programs in cyber defense, awareness, and community outreach.',
+        'badge'     => 'Coming Soon'
+    ]);
+});
+
 // Contact Page (Foundation Placeholder)
 Router::get('/contact', function () {
     view('pages/placeholder', [

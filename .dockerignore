@@ -1,0 +1,31 @@
+# Version Control
+.git
+.github
+
+# Composer Dependencies (installed inside container)
+vendor/
+
+# Environment Variables & Local Secrets
+.env
+.env.*
+!.env.example
+
+# IDE & OS Artifacts
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+*.swp
+*.swo
+
+# Local runtime storage
+storage/logs/*
+!storage/logs/.gitkeep
+storage/cache/*
+!storage/cache/.gitkeep
+storage/sessions/*
+!storage/sessions/.gitkeep
+
+# Development and testing
+tests/
+*.log

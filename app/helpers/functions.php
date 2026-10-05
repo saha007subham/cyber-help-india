@@ -116,7 +116,23 @@ function config(?string $key = null, mixed $default = null): mixed {
  * @return string
  */
 function base_url(string $path = ''): string {
-    $baseUrl = rtrim((string)config('app.url', 'http://localhost:8000'), '/');
+    $configuredUrl = config('app.url');
+
+    // If an external non-localhost URL is explicitly set, use it
+    if (!empty($configuredUrl) && !str_contains((string)$configuredUrl, 'localhost') && !str_contains((string)$configuredUrl, '127.0.0.1')) {
+        $baseUrl = rtrim((string)$configuredUrl, '/');
+    } elseif (!empty($_SERVER['HTTP_HOST'])) {
+        $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || (!empty($_SERVER['SERVER_PORT']) && (int)$_SERVER['SERVER_PORT'] === 443)
+            || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+
+        $scheme = $isHttps ? 'https' : 'http';
+        $host = $_SERVER['HTTP_HOST'];
+        $baseUrl = "{$scheme}://{$host}";
+    } else {
+        $baseUrl = rtrim((string)($configuredUrl ?: 'http://localhost:8000'), '/');
+    }
+
     $path = ltrim($path, '/');
     return $path !== '' ? "{$baseUrl}/{$path}" : $baseUrl;
 }

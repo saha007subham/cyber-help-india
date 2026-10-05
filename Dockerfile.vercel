@@ -1,0 +1,47 @@
+# ==============================================================================
+# Cyber Help India — Vercel Container Build Specification (PHP 8.5 + FrankenPHP)
+# ==============================================================================
+
+FROM dunglas/frankenphp:latest-php8.5-bookworm
+
+# Install required PHP production extensions using FrankenPHP's built-in installer
+RUN install-php-extensions \
+    pdo_mysql \
+    opcache \
+    zip \
+    intl
+
+# Install Composer binary from official Docker image
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
+
+# Set container working directory
+WORKDIR /app
+
+# Configure default port and environment
+ENV PORT=80 \
+    COMPOSER_ALLOW_SUPERUSER=1
+
+# Copy composer dependency files first to leverage Docker layer caching
+COPY composer.json composer.lock* ./
+
+# Install Composer dependencies (production, optimized classmap)
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-progress
+
+# Copy application source code into container
+COPY . .
+
+# Generate authoritative optimized PSR-4 autoload map
+RUN composer dump-autoload --optimize --no-dev
+
+# Ensure runtime directories exist with write permissions
+RUN mkdir -p storage/logs storage/cache storage/sessions public/uploads \
+    && chmod -R 777 storage public/uploads
+
+# Copy web server configuration
+COPY Caddyfile /etc/frankenphp/Caddyfile
+
+# Expose default port (Vercel assigns $PORT dynamically at container launch)
+EXPOSE 80
+
+# Launch FrankenPHP with Caddyfile listening on :{$PORT:80}
+CMD ["frankenphp", "run", "--config", "/etc/frankenphp/Caddyfile"]
