@@ -1,0 +1,193 @@
+/**
+ * Cyber Help India — Responsive Stylesheet
+ * 
+ * Media queries for tablet, mobile, and small screen viewports.
+ */
+
+/* ==========================================================================
+   Tablet and Below (<= 992px)
+   ========================================================================== */
+@media screen and (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .cta-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-8);
+    }
+
+    .cta-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* ==========================================================================
+   Mobile Devices (<= 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* Navbar Mobile Drawer */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.open .hamburger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.open .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.open .hamburger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .navbar-nav {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(10, 15, 29, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: var(--space-8) var(--space-6);
+        gap: var(--space-6);
+        transform: translateY(-120%);
+        transition: transform var(--transition-base);
+        border-bottom: 1px solid var(--color-border);
+        overflow-y: auto;
+    }
+
+    .navbar-nav.open {
+        transform: translateY(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-2);
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 1.15rem;
+        padding: var(--space-3) var(--space-4);
+        border-radius: var(--radius-md);
+        display: block;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: var(--color-bg-card);
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .nav-cta-group {
+        margin-top: var(--space-4);
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-cta-group .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: var(--space-3);
+    }
+
+    /* Hero Responsive */
+    .hero-section {
+        padding-top: var(--space-12);
+        padding-bottom: var(--space-10);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: var(--space-3);
+        margin-bottom: var(--space-10);
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        padding: var(--space-4);
+    }
+
+    .stat-card:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: var(--space-4);
+    }
+
+    .hidden-mobile {
+        display: none;
+    }
+
+    /* Footer Responsive */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: var(--space-2);
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   Small Mobile Viewports (<= 480px)
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: var(--space-3);
+        padding-right: var(--space-3);
+    }
+
+    .section {
+        padding-top: var(--space-10);
+        padding-bottom: var(--space-10);
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: var(--space-6);
+    }
+
+    .cta-banner {
+        padding: var(--space-6);
+    }
+
+    .cta-title {
+        font-size: 1.35rem;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}

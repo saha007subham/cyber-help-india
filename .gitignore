@@ -1,0 +1,28 @@
+# Environment Configuration
+.env
+.env.backup
+.env.local
+
+# Composer Dependencies
+/vendor/
+
+# Storage & Temporary Files
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/cache/*
+!/storage/cache/.gitkeep
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+
+# User Uploads
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.log

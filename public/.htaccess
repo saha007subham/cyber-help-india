@@ -1,0 +1,20 @@
+# ==============================================================================
+# Public Directory Apache Configuration
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent directory browsing
+    Options -Indexes
+
+    # Block access to hidden files and directories (starting with a dot)
+    RewriteRule (^|/)\.(?!well-known) - [F]
+
+    # If the requested file or directory exists, serve it directly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Otherwise forward all requests to the front controller
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>

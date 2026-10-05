@@ -1,0 +1,14 @@
+# ==============================================================================
+# Root Directory Protection & Public Redirection
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent direct access to sensitive files
+    RewriteRule ^(\.env|\.git|composer\.(json|lock)|README\.md) - [F,L]
+
+    # Rewrite all traffic to public/ folder if DocumentRoot is repository root
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

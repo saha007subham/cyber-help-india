@@ -1,0 +1,20 @@
+{
+    "name": "cyber-help/website",
+    "description": "Cyber Help India - Modular Lightweight MVC PHP Application",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/helpers/functions.php",
+            "app/helpers/security.php",
+            "app/helpers/validation.php",
+            "app/helpers/auth.php"
+        ]
+    }
+}
