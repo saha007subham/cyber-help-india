@@ -493,6 +493,11 @@ textarea {
     opacity var(--transition-base);
 }
 
+body.nav-locked {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
 /* ==========================================================================
    5. Buttons & Badges
    ========================================================================== */
