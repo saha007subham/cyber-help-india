@@ -8,186 +8,233 @@
    Tablet and Below (<= 992px)
    ========================================================================== */
 @media screen and (max-width: 992px) {
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-8);
-    }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
 
-    .footer-brand {
-        grid-column: 1 / -1;
-    }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
 
-    .cta-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: var(--space-8);
-    }
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-8);
+  }
 
-    .cta-buttons {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+  .cta-buttons {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================================================================
+   Medium Screens / Laptops (769px to 1240px)
+   ========================================================================== */
+@media screen and (max-width: 1240px) and (min-width: 769px) {
+  .navbar-nav {
+    margin-left: var(--space-4);
+    gap: var(--space-3);
+  }
+  .nav-list {
+    gap: 0.75rem;
+  }
+  .nav-link {
+    font-size: 0.88rem;
+    padding: var(--space-1) var(--space-1);
+  }
+  .nav-cta-group {
+    gap: 10px;
+  }
+  .btn-header-enquiry {
+    padding: 4px 12px;
+  }
+  .enquiry-text {
+    font-size: 0.82rem;
+  }
+  .btn-header-call {
+    padding: 0 14px;
+    gap: 8px;
+  }
+  .call-number {
+    font-size: 1.15rem;
+  }
+  .talk-tagline {
+    font-size: 1.35rem;
+    top: -3px;
+  }
 }
 
 /* ==========================================================================
    Mobile Devices (<= 768px)
    ========================================================================== */
 @media screen and (max-width: 768px) {
-    /* Navbar Mobile Drawer */
-    .nav-toggle {
-        display: flex;
-    }
+  /* Navbar Mobile Drawer */
+  .nav-toggle {
+    display: flex;
+  }
 
-    .nav-toggle.open .hamburger-line:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
+  .nav-toggle.open .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
 
-    .nav-toggle.open .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
+  .nav-toggle.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
 
-    .nav-toggle.open .hamburger-line:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
+  .nav-toggle.open .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
-    .navbar-nav {
-        position: fixed;
-        top: 72px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(10, 15, 29, 0.98);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-start;
-        padding: var(--space-8) var(--space-6);
-        gap: var(--space-6);
-        transform: translateY(-120%);
-        transition: transform var(--transition-base);
-        border-bottom: 1px solid var(--color-border);
-        overflow-y: auto;
-    }
+  .navbar-nav {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #181c38;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: var(--space-8) var(--space-6);
+    gap: var(--space-6);
+    transform: translateY(-120%);
+    transition: transform var(--transition-base);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow-y: auto;
+  }
 
-    .navbar-nav.open {
-        transform: translateY(0);
-    }
+  .navbar-nav.open {
+    transform: translateY(0);
+  }
 
-    .nav-list {
-        flex-direction: column;
-        align-items: stretch;
-        gap: var(--space-2);
-        width: 100%;
-    }
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+    width: 100%;
+  }
 
-    .nav-link {
-        font-size: 1.15rem;
-        padding: var(--space-3) var(--space-4);
-        border-radius: var(--radius-md);
-        display: block;
-    }
+  .nav-link {
+    font-size: 1.15rem;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    display: block;
+  }
 
-    .nav-link:hover,
-    .nav-link.active {
-        background-color: var(--color-bg-card);
-    }
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: var(--color-bg-card);
+  }
 
-    .nav-link.active::after {
-        display: none;
-    }
+  .nav-link.active::after {
+    display: none;
+  }
 
-    .nav-cta-group {
-        margin-top: var(--space-4);
-        flex-direction: column;
-        width: 100%;
-    }
+  .nav-cta-group {
+    margin-top: var(--space-4);
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-5);
+  }
 
-    .nav-cta-group .btn {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        padding: var(--space-3);
-    }
+  .btn-header-enquiry {
+    width: 100%;
+    height: 52px;
+  }
 
-    /* Hero Responsive */
-    .hero-section {
-        padding-top: var(--space-12);
-        padding-bottom: var(--space-10);
-    }
+  .header-call-wrap {
+    width: 100%;
+    padding-top: 14px;
+  }
 
-    .hero-actions {
-        flex-direction: column;
-        gap: var(--space-3);
-        margin-bottom: var(--space-10);
-    }
+  .btn-header-call {
+    width: 100%;
+    justify-content: center;
+    height: 52px;
+  }
 
-    .hero-actions .btn {
-        width: 100%;
-    }
+  /* Hero Responsive */
+  .hero-section {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-10);
+  }
 
-    .hero-stats-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-        padding: var(--space-4);
-    }
+  .hero-actions {
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-10);
+  }
 
-    .stat-card:not(:last-child) {
-        border-right: none;
-        border-bottom: 1px solid var(--color-border);
-        padding-bottom: var(--space-4);
-    }
+  .hero-actions .btn {
+    width: 100%;
+  }
 
-    .hidden-mobile {
-        display: none;
-    }
+  .hero-stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    padding: var(--space-4);
+  }
 
-    /* Footer Responsive */
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
-    }
+  .stat-card:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-4);
+  }
 
-    .footer-bottom-content {
-        flex-direction: column;
-        gap: var(--space-2);
-        text-align: center;
-    }
+  .hidden-mobile {
+    display: none;
+  }
+
+  /* Footer Responsive */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
 }
 
 /* ==========================================================================
    Small Mobile Viewports (<= 480px)
    ========================================================================== */
 @media screen and (max-width: 480px) {
-    .container {
-        padding-left: var(--space-3);
-        padding-right: var(--space-3);
-    }
+  .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
 
-    .section {
-        padding-top: var(--space-10);
-        padding-bottom: var(--space-10);
-    }
+  .section {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+  }
 
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .feature-card {
-        padding: var(--space-6);
-    }
+  .feature-card {
+    padding: var(--space-6);
+  }
 
-    .cta-banner {
-        padding: var(--space-6);
-    }
+  .cta-banner {
+    padding: var(--space-6);
+  }
 
-    .cta-title {
-        font-size: 1.35rem;
-    }
+  .cta-title {
+    font-size: 1.35rem;
+  }
 
-    .btn-lg {
-        padding: 0.75rem 1.25rem;
-        font-size: 0.95rem;
-    }
+  .btn-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
 }
