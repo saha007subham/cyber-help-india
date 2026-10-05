@@ -271,7 +271,7 @@ textarea {
 .navbar-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex: 1;
   margin-left: var(--space-8);
   gap: var(--space-6);
@@ -281,8 +281,9 @@ textarea {
   display: flex;
   list-style: none;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -317,7 +318,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-left: auto;
+  /* margin-left: auto; */
   flex-shrink: 0;
 }
 
@@ -328,7 +329,7 @@ textarea {
   align-items: center;
   justify-content: center;
   height: 50px;
-  padding: 5px 18px;
+  padding: 0px 20px;
   border-radius: 9px;
   background: linear-gradient(90deg, #ff9e6a 0%, #ff5c7b 52%, #e52872 100%);
   color: #ffffff;
@@ -360,7 +361,7 @@ textarea {
 
 .enquiry-text {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #ffffff;
   line-height: 1;
@@ -436,7 +437,7 @@ textarea {
 
 .call-number {
   font-family: var(--font-heading), "Outfit", sans-serif;
-  font-size: 1.38rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 0.5px;
