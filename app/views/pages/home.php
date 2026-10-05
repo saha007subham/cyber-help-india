@@ -15,28 +15,49 @@ declare(strict_types=1);
      ========================================================================= -->
 <section class="hero-section">
     <div class="container hero-container">
-        <div class="hero-badge-wrap">
-            <span class="badge badge-accent">
-                <span class="badge-dot"></span> Citizen Cybersecurity Initiative
-            </span>
-        </div>
+        <div class="hero-layout">
+            <div class="hero-copy">
+                <div class="hero-badge-wrap">
+                    <span class="badge badge-accent">
+                        <span class="badge-dot"></span> Citizen Cybersecurity Initiative
+                    </span>
+                </div>
 
-        <h1 class="hero-title">
-            Defend Your Digital Life. <br class="hidden-mobile">
-            <span class="text-gradient">Report Cyber Threats Rapidly.</span>
-        </h1>
+                <h1 class="hero-title">
+                    Defend Your Digital Life. <br class="hidden-mobile">
+                    <span class="text-gradient">Report Cyber Threats Rapidly.</span>
+                </h1>
 
-        <p class="hero-subtitle">
-            An open guidance platform built to empower Indian citizens, students, and organizations with proactive cyber defense, scam detection, and rapid recovery steps.
-        </p>
+                <p class="hero-subtitle">
+                    An open guidance platform built to empower Indian citizens, students, and organizations with proactive cyber defense, scam detection, and rapid recovery steps.
+                </p>
 
-        <div class="hero-actions">
-            <a href="tel:1930" class="btn btn-emergency btn-lg" id="hero-emergency-btn">
-                <span class="btn-icon">&#128222;</span> Call 1930 (Helpline)
-            </a>
-            <a href="<?= base_url('about') ?>" class="btn btn-outline btn-lg" id="hero-explore-btn">
-                Explore Guidance &rarr;
-            </a>
+                <div class="hero-actions">
+                    <a href="tel:1930" class="btn btn-emergency btn-lg" id="hero-emergency-btn">
+                        <span class="btn-icon">&#128222;</span> Call 1930 (Helpline)
+                    </a>
+                    <a href="<?= base_url('about') ?>" class="btn btn-outline btn-lg" id="hero-explore-btn">
+                        Explore Guidance &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Cyber safety slideshow">
+                <div class="hero-slider">
+                    <div class="hero-slide">
+                        <img src="<?= asset('images/logo/Hero-image-1.jpg') ?>" alt="Cyber safety awareness campaign" />
+                    </div>
+                    <div class="hero-slide">
+                        <img src="<?= asset('images/logo/Hero-image-2.jpg') ?>" alt="Reporting cyber crimes and scams" />
+                    </div>
+                    <div class="hero-slide">
+                        <img src="<?= asset('images/logo/Hero-image-3.jpg') ?>" alt="Cybersecurity guidance and protection" />
+                    </div>
+                    <div class="hero-slide">
+                        <img src="<?= asset('images/logo/Hero-image-1.jpg') ?>" alt="Cyber safety awareness campaign repeat" />
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Metric Badges -->

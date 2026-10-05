@@ -72,7 +72,7 @@ if ($currentUri === '//') {
                     <span class="talk-tagline">Let's Talk</span>
                     <a href="tel:9233556555" class="btn-header-call" title="Call 92335 56555">
                         <span class="call-icon-wrap" aria-hidden="true">
-                            <svg width="20" height="16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="22" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 13.5C8.8 17.2 11.8 20.2 15.5 22L18.4 19.1C18.8 18.7 19.3 18.6 19.8 18.7C21.2 19.2 22.8 19.5 24.4 19.5C25.3 19.5 26 20.2 26 21.1V26.2C26 27.1 25.3 27.8 24.4 27.8C12.6 27.8 3.2 18.4 3.2 6.6C3.2 5.7 3.9 5 4.8 5H9.9C10.8 5 11.5 5.7 11.5 6.6C11.5 8.2 11.8 9.8 12.3 11.2C12.4 11.7 12.3 12.2 11.9 12.6L7 13.5Z" fill="white"/>
                                 <path d="M22.5 7C25.5 10 25.5 15 22.5 18" stroke="white" stroke-width="2.4" stroke-linecap="round"/>
                                 <path d="M26 3.5C31 8.5 31 18.5 26 23.5" stroke="white" stroke-width="2.4" stroke-linecap="round"/>
