@@ -17,32 +17,51 @@ declare(strict_types=1);
     <div class="container hero-container">
         <div class="hero-layout">
             <div class="hero-copy">
-                <div class="hero-badge-wrap">
+                <!-- <div class="hero-badge-wrap">
                     <span class="badge badge-accent">
                         <span class="badge-dot"></span> Citizen Cybersecurity Initiative
                     </span>
-                </div>
+                </div> -->
 
                 <h1 class="hero-title">
-                    Defend Your Digital Life. <br class="hidden-mobile">
-                    <span class="text-gradient">Report Cyber Threats Rapidly.</span>
+                    Think Digital. <br class="hidden-mobile">
+                    <span class="text-gradient">Grow Smarter.</span>
                 </h1>
 
                 <p class="hero-subtitle">
-                    An open guidance platform built to empower Indian citizens, students, and organizations with proactive cyber defense, scam detection, and rapid recovery steps.
+                    From Stunning Websites to Smart Software, strategy to results - we take care of your business with Ai Based Digital Marketing.
                 </p>
 
                 <div class="hero-actions">
-                    <a href="tel:1930" class="btn btn-emergency btn-lg" id="hero-emergency-btn">
-                        <span class="btn-icon">&#128222;</span> Call 1930 (Helpline)
+                    <a href="tel:1930" class="btn-header-enquiry hero-quote-btn" id="hero-emergency-btn">
+                        Get A Free Quote <span class="btn-icon">&rarr;</span>
                     </a>
                     <a href="<?= base_url('about') ?>" class="btn btn-outline btn-lg" id="hero-explore-btn">
-                        Explore Guidance &rarr;
+                        Learn More
                     </a>
                 </div>
             </div>
 
-            <div class="hero-visual" aria-label="Cyber safety slideshow">
+            <div class="hero-visual cyber-glow-border" aria-label="Cyber safety slideshow">
+                <svg class="cyber-glow-border-svg" viewBox="0 0 560 440" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="cyberScanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#7dd3fc"/>
+                            <stop offset="35%" stop-color="#38bdf8"/>
+                            <stop offset="70%" stop-color="#60a5fa"/>
+                            <stop offset="100%" stop-color="#c084fc"/>
+                        </linearGradient>
+                        <filter id="cyberScanGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="2.8" result="blur"/>
+                            <feMerge>
+                                <feMergeNode in="blur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <rect class="scan-track" x="1" y="1" width="558" height="438" rx="28" />
+                    <rect class="scan-signal" x="1" y="1" width="558" height="438" rx="28" />
+                </svg>
                 <div class="hero-slider">
                     <div class="hero-slide">
                         <img src="<?= asset('images/logo/Hero-image-1.jpg') ?>" alt="Cyber safety awareness campaign" />

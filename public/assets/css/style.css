@@ -344,6 +344,30 @@ textarea {
   user-select: none;
 }
 
+.hero-quote-btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 24px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  border-radius: 10px;
+}
+
+.hero-quote-btn .btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+}
+
 .btn-header-enquiry:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(229, 40, 114, 0.5);
@@ -659,14 +683,55 @@ textarea {
   margin-right: auto;
   border-radius: 28px;
   overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.9);
   box-shadow: 0 24px 90px rgba(15, 23, 42, 0.38);
-  background: rgba(15, 23, 42, 0.65);
+}
+
+.cyber-glow-border {
+  position: relative;
+}
+
+.cyber-glow-border-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cyber-glow-border-svg .scan-track {
+  fill: none;
+  stroke: rgba(59, 130, 246, 0.2);
+  stroke-width: 1.2;
+}
+
+.cyber-glow-border-svg .scan-signal {
+  fill: none;
+  stroke: url(#cyberScanGradient);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 80 1650;
+  stroke-dashoffset: 0;
+  filter: url(#cyberScanGlow);
+  animation: cyberBorderScan 6s linear infinite;
+}
+
+@keyframes cyberBorderScan {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1760;
+  }
 }
 
 .hero-slider {
   display: flex;
   width: 400%;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 27px;
+  overflow: hidden;
   animation: heroSlide 12s infinite linear;
 }
 
@@ -676,6 +741,18 @@ textarea {
   opacity: 0.96;
   transform: scale(0.98);
   transition: transform 0.5s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-glow-border-svg .scan-signal {
+    animation: none;
+    stroke-dasharray: 0 0;
+    stroke-dashoffset: 0;
+  }
+
+  .cyber-glow-border-svg .scan-track {
+    stroke: rgba(59, 130, 246, 0.16);
+  }
 }
 
 .hero-slide img {
@@ -720,7 +797,6 @@ textarea {
     opacity: 1;
     filter: saturate(1.05) brightness(1);
   }
-}
 }
 
 /* Hero Stats Grid */
